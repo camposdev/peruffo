@@ -1,0 +1,51 @@
+.iconButton {
+  display: flex;
+  align-items: stretch;
+  color: white;
+  border: 0;
+  background: var(--secondary);
+  height: 60px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  
+  .wrapIcon {
+    display: flex;
+    align-items: center;
+    padding: 0 8px 0 20px;
+    svg {
+      width: 32px;
+      height: 32px;
+      color: white;
+    }
+  }
+  
+  .wrapText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex: 1;
+    padding: 0 30px;
+    font-size: 22px;
+    font-weight: 800;
+    font-style: italic;
+    line-height: 1;
+    text-transform: uppercase;
+    text-align: left;
+    background: var(--primary);
+    color: white;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    small {
+      display: block;
+      font-size: 14px;
+    }
+  }
+
+  &:hover {
+    background: var(--primary);
+    .wrapText {
+      background: var(--secondary);
+    }
+  }
+}
