@@ -3,10 +3,9 @@ import { FaWhatsapp, FaInstagram, FaFacebookF } from 'react-icons/fa'
 import logo from '../assets/images/logo.png'
 import IconButton from '@/components/IconButton'
 import Calendar from '@/components/Calendar'
+import { data } from './data'
 
 export default async function Home() {
-  const data = await fetch('http://localhost:3000/api/data').then(res => res.json())
-
   return (
     <main>
       <header className="hero">
