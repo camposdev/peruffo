@@ -1,14 +1,15 @@
 import styles from './iconButton.module.scss'
-import { ButtonHTMLAttributes, ReactElement, ReactNode } from 'react'
+import { AnchorHTMLAttributes, ButtonHTMLAttributes, ReactElement, ReactNode } from 'react'
 
 type Props = {
   icon: ReactElement
   children: ReactNode
-} & ButtonHTMLAttributes<HTMLButtonElement>
+  href: string
+} & AnchorHTMLAttributes<HTMLAnchorElement>
 
-export default function IconButton({ icon, children }: Props) {
+export default function IconButton({ icon, href, children, ...props }: Props) {
   return (
-    <button className={styles.iconButton}>
+    <a href={href} className={styles.iconButton} {...props}>
       <div className={styles.wrapIcon}>
         {icon}
       </div>
@@ -16,6 +17,6 @@ export default function IconButton({ icon, children }: Props) {
       <div className={styles.wrapText}>
         {children}
       </div>
-    </button>
+    </a>
   )
 }

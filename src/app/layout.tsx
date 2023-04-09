@@ -1,4 +1,5 @@
 import { Montserrat } from 'next/font/google'
+import { data } from './data'
 import '../assets/scss/globals.scss'
 import 'animate.css';
 
@@ -8,8 +9,8 @@ const montserrat = Montserrat({
 })
 
 export const metadata = {
-  title: 'Peruffo Jiu-Jistsu',
-  description: 'Aulas de Jiu-Jitsu em Florianópolis',
+  title: data.head.title,
+  description: data.head.description,
   viewport: 'width=device-width, initial-scale=1',
   icons: {
     icon: '/icon.png'

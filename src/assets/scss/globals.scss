@@ -24,6 +24,29 @@ html {
     small {
       @apply text-2xl block text-secondary tracking-normal;
     }
+    &.white {
+      small {
+        @apply text-white
+      }
+    }
+  }
+  .button {
+    @apply inline-block bg-primary text-white text-xl font-extrabold italic uppercase tracking-tighter py-4 px-20 rounded-full hover:bg-secondary transition-all;
+  }
+  .social-icon {
+    @apply mx-1 hover:opacity-70 transition-all p-1;
+    svg {
+      @apply w-6 h-6;
+    }
+  }
+  .info-content {
+    @apply text-base text-white font-medium;
+    h5 {
+      @apply font-extrabold italic uppercase
+    }
+    address {
+      @apply max-w-[230px] text-xs not-italic;
+    }
   }
 }
 
@@ -262,24 +285,6 @@ html {
   }
 }
 
-.info-content--item {
-  text-align: right;
-  color: white;
-  font-size: 16px;
-  margin-top: 20px;
-  font-weight: 600;
-  h4 {
-    font-weight: 800;
-    font-style: italic;
-    text-transform: uppercase;
-  }
-  address {
-    width: 230px;
-    font-size: 12px;
-    font-style: normal;
-  }
-}
-
 .about {
   min-height: 790px;
   background-image: url('../images/bg-about.jpg');
@@ -291,4 +296,24 @@ html {
   width: 70px;
   height: 70px;
   background-image: url('../images/dot-list.png');
+}
+
+.reviews {
+  background-image: url('../images/bg-reviews.jpg');
+  background-position: center center;
+  background-size: cover;
+}
+
+.rec {
+  .rec-dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    background-color: white;
+    opacity: 0.3;
+    box-shadow: none !important;
+    &_active {
+      opacity: 1;
+    }
+  }
 }
